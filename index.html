@@ -58,7 +58,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
+          <button class="hero-btn common-btn" type="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <section class="benefits section">
@@ -120,20 +122,21 @@
               <img
                 src="./images/coding.jpg"
                 alt="Людина за комп'ютером створює програмний код"
-                width="370"/>
+                width="370"
+              />
               <p class="works-overlay">Десктопні додатки</p>
             </li>
             <li class="works-item">
               <img
                 src="./images/mobile.jpg"
                 alt="Людина за комп'ютером займається тестуванням мобiльних додаткiв"
-                width="370"/>
-                <p class="works-overlay">Мобільні додатки</p>
+                width="370"
+              />
+              <p class="works-overlay">Мобільні додатки</p>
             </li>
             <li class="works-item">
               <img src="./images/design.jpg" alt="Дизайнер обирає кольори для макету" width="370" />
-                <p class="works-overlay">Дизайнерські рішення</p>
-              </div>
+              <p class="works-overlay">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -388,8 +391,8 @@
             </ul>
           </address>
         </div>
-        <div>
-          <p class="social-text">Приєднуйтесь</p>
+        <div class="social-media">
+          <p class="social-title">Приєднуйтесь</p>
           <ul class="social-list list">
             <li class="social-item">
               <a class="social-link" href="#">
@@ -421,6 +424,18 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe">
+          <p class="subscribe-title">Підпишіться на розсилку</p>
+          <form class="form-subscribe">
+            <input class="subscribe-email" name="user-email" type="email" placeholder="E-mail" />
+            <button class="subscribe-btn common-btn" type="submit">
+              Підписатися
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -430,6 +445,51 @@
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+
+        <form class="modal-form" autocomplete="off">
+          <label class="field-label" for="name">Ім'я</label>
+          <div class="input-wrap">
+            <input class="form-field" type="text" name="user-name" id="name" required />
+            <svg class="field-icon" width="18" height="18">
+              <use href="./images/sprite.svg#icon-person"></use>
+            </svg>
+          </div>
+
+          <label class="field-label" for="tel">Телефон</label>
+          <div class="input-wrap">
+            <input class="form-field" type="tel" name="user-tel" id="tel" required />
+            <svg class="field-icon" width="18" height="18">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
+
+          <label class="field-label" for="email">Пошта</label>
+          <div class="input-wrap">
+            <input class="form-field" type="email" name="user-email" id="email" />
+            <svg class="field-icon" width="18" height="18">
+              <use href="./images/sprite.svg#icon-email"></use>
+            </svg>
+          </div>
+
+          <label class="field-label" for="comment">Коментар</label>
+          <textarea
+            class="form-field form-textarea"
+            name="user-comment"
+            id="comment"
+            placeholder="Введіть текст"
+          ></textarea>
+
+          <label class="check-label">
+            <input class="checkbox" type="checkbox" name="privacy" />
+            <svg class="checkmark-icon" width="16" height="15">
+              <use href="./images/sprite.svg#icon-mark"></use>
+            </svg>
+            <span>Погоджуюся з розсилкою та приймаю</span>
+            &#160;<a class="check-link" href="#">Умови договору</a>
+          </label>
+          <button class="form-send-btn common-btn" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
